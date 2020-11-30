@@ -1,0 +1,12 @@
+{
+  "dest": "release-builds/",
+  "icon": "files/icon.png",
+  "description": "Prosta aplikacja do monitorowania procesu tworzenia bonsai.",
+  "productDescription": "Prosta aplikacja do monitorowania procesu tworzenia bonsai.",
+  "categories": [
+    "Office"
+  ],
+  "lintianOverrides": [
+    "changelog-file-missing-in-native-package"
+  ]
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Katalog bonsai</title>
+    <link rel="stylesheet" href="files/styles.css">
+</head>
+<body>
+<div class="sidenav" id="menu">
+    <span class="add-product"><a href="files/addProduct.html" id="add-product-link">Dodaj roślinę</a></span>
+    <br/>
+
+</div>
+
+<div class="main" id="main">
+    <div class="initial">
+        <h1 class="product-name" id="product-name"></h1>
+        <div class="product-price" id="product-price">
+            <div class="product-sum-price-container" id="product-sum-price-container">
+                Cena sumaryczna: <span class="product-sum-price" id="product-sum-price"></span> zł
+            </div>
+            <div class="product-initial-price-container" id="product-initial-price-container">
+                Cena początkowa: <span class="product-initial-price" id="product-initial-price"></span> zł
+            </div>
+        </div>
+        <div class="product-species" id="product-species"></div>
+        <div class="product-style" id="product-style"></div>
+        <div class="product-initial-description" id="product-initial-description"></div>
+        <div class="product-control control">
+            <a class="product-remove button-like" id="product-remove" href="?">Usuń to drzewko</a>
+            <a class="product-edit button-like" id="product-edit">Edytuj podstawowe informacje o drzewku</a>
+        </div>
+    </div>
+    <div class="entries" id="entries">
+
+    </div>
+    <div class="add-entry-container"><a class="add-entry button-like" id="add-entry">Dodaj nowy wpis</a></div>
+
+</div>
+<script src="files/index.js"></script>
+</body>
+</html>

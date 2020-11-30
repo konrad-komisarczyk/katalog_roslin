@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj lub edytuj roślinę</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="sidenav" id="menu">
+    <span class="back-link">
+        <a id="go-back" class="go-back" href="../index.html">&#x293A; Powrót</a>
+    </span>
+</div>
+<div class="main" id="main">
+    <h1 id="page-title">Dodaj nową roślinę:</h1>
+    <form onsubmit="saveProduct()">
+        <label for="prodname">Nazwa: </label>
+        <input id="prodname" name="prodname" required>
+        <br/><br/>
+        <label for="species">Gatunek: </label>
+        <input id="species" name="species">
+        <br/><br/>
+        <label for="style">Styl: </label>
+        <input id="style" name="style">
+        <br/><br/>
+        <label for="initial-price">Cena początkowa: </label>
+        <input id="initial-price" name="initial-price" type="number" value="0" required> zł
+        <br/><br/>
+        <label for="initial-description">Opis: </label>
+        <textarea id="initial-description" name="initial-description" rows="6" cols="120"></textarea>
+        <br/><br/>
+        <button type="submit"><b>Zapisz</b></button>
+    </form>
+</div>
+<script src="addProduct.js"></script>
+</body>
+</html>

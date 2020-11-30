@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj lub edytuj wpis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="sidenav" id="menu">
+    <span class="back-link">
+        <a id="go-back" class="go-back" href="../index.html">&#x293A; Powrót</a>
+    </span>
+</div>
+<div class="main" id="main">
+    <h1 id="title">Dodaj nowy wpis</h1>
+    <form id="form-entry" onsubmit="saveEntry();">
+        <label for="date">Data: </label>
+        <input id="date" name="date" type="date" required>
+        <br/><br/>
+        <label for="price-increment">Wzrost ceny: </label>
+        <input id="price-increment" name="price-increment" type="number" value="0" required> zł
+        <br/><br/>
+        <label for="description">Opis: </label>
+        <textarea id="description" name="description" rows="6" cols="120"></textarea>
+        <br/><br/>
+        <label for="images">Zdjęcia: </label>
+        <input id="images" name="images[]" type="file" multiple>
+        <br/><br/>
+        <input type="hidden" name="id" id="hidden-id">
+        <button type="submit" class="submit-button"><b>Zapisz</b></button>
+    </form>
+</div>
+<script src="addEntry.js"></script>
+</body>
+</html>
