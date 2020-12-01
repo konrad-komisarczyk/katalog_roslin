@@ -15,19 +15,19 @@
     <h1 id="page-title">Dodaj nową roślinę:</h1>
     <form onsubmit="saveProduct()">
         <label for="prodname">Nazwa: </label>
-        <input id="prodname" name="prodname" required>
+        <input id="prodname" name="prodname" size="28" required>
         <br/><br/>
         <label for="species">Gatunek: </label>
-        <input id="species" name="species">
+        <input id="species" name="species" size="28">
         <br/><br/>
         <label for="style">Styl: </label>
-        <input id="style" name="style">
+        <input id="style" name="style" size="36">
         <br/><br/>
-        <label for="initial-price">Cena początkowa: </label>
-        <input id="initial-price" name="initial-price" type="number" value="0" required> zł
+        <label for="initial-price">Koszt początkowy: </label>
+        <input id="initial-price" name="initial-price" type="number" placeholder="0" required> zł
         <br/><br/>
         <label for="initial-description">Opis: </label>
-        <textarea id="initial-description" name="initial-description" rows="6" cols="120"></textarea>
+        <textarea id="initial-description" name="initial-description" rows="10" cols="130"></textarea>
         <br/><br/>
         <button type="submit"><b>Zapisz</b></button>
     </form>

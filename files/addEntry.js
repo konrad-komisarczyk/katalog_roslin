@@ -47,7 +47,7 @@ function saveEntry() {
             var entries = json.products[i].entries;
 
             var date = document.getElementById("date").value;
-            var priceIncrement = document.getElementById("price-increment").value;
+            var priceIncrement = parseFloat(document.getElementById("price-increment").value);
             var description = document.getElementById("description").value.trim();
 
             var imagesField = document.getElementById("images");
@@ -78,9 +78,9 @@ function saveEntry() {
             }
             entries.sort(function(a, b) {
                 if (a.date > b.date) {
-                    return 1;
-                } else if (a.date < b.date) {
                     return -1;
+                } else if (a.date < b.date) {
+                    return 1;
                 } else {
                     return 0;
                 }

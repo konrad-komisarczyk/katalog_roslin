@@ -98,7 +98,7 @@ function displayProduct() {
 
                 var entryPriceIncrement = document.createElement("div");
                 entryPriceIncrement.setAttribute("class", "entry-price-increment");
-                entryPriceIncrement.innerText = "Wzrost ceny: " + entries[ei].priceIncrement + " zł";
+                entryPriceIncrement.innerText = "Wzrost kosztu: " + entries[ei].priceIncrement + " zł";
                 entryContainer.appendChild(entryPriceIncrement);
 
                 var entryControl = document.createElement("div");

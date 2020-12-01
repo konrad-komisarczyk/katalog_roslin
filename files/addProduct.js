@@ -43,7 +43,7 @@ function saveProduct() {
             json.products[i].prodname = prodname;
             json.products[i].species = species;
             json.products[i].style = style;
-            json.products[i].initialPrice = initialPrice;
+            json.products[i].initialPrice = parseFloat(initialPrice);
             json.products[i].initialDescription = initialDescription;
         } else {
             alert("Too big product id.");
