@@ -82,6 +82,16 @@
     margin: 8px;
 }
 
+.product-height {
+     font-size: 24px;
+     margin: 8px;
+ }
+
+.product-container {
+      font-size: 24px;
+      margin: 8px;
+  }
+
 .product-price {
     font-size: 24px;
     color: #111111;
@@ -112,6 +122,10 @@
     padding: 4px;
 }
 
+.highlited {
+    margin-left: 40px !important;
+}
+
 .entry-date {
     font-size: 20px;
     background: #DDD;
@@ -127,11 +141,18 @@
     padding: 8px;
 }
 
+.entry-title {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
 .entry-price-increment {
     font-size: 20px;
-    text-align: right;
+    float: right;
     color: #111111;
-    padding: 0px 8px 0px;
+    /*padding: 0px 8px 0px;*/
 }
 
 .images-container {

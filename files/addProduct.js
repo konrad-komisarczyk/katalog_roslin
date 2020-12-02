@@ -1,11 +1,10 @@
 const fs = require('fs');
-
 try {
     let rawdata = fs.readFileSync('./files/database.json');
     var json = JSON.parse(rawdata);
 } catch (e) {
-    alert("Wystąpił błąd we wczytywaniu bazy danych! Zostaniesz przekierowany na stronę główną.");
-    window.open("../index.html");
+    document.body.innerHTML = "Wystąpił krytyczny błąd. Zamknij aplikację.";
+    alert("Wystąpił błąd we wczytywaniu bazy danych! Upewnij się, że plik \'database.json\' znajduje się w odpowiednim katalogu.");
 }
 
 var url = new URL(window.location.href);
@@ -22,7 +21,6 @@ if (id) {
         document.getElementById("prodname").value = product.prodname;
         document.getElementById("species").value = product.species;
         document.getElementById("style").value = product.style;
-        document.getElementById("initial-price").value = product.initialPrice;
         document.getElementById("initial-description").value = product.initialDescription;
     } else {
         alert("Nie ma drzewka o takim id! Zostanie dodane nowe drzewko.");
@@ -34,7 +32,6 @@ function saveProduct() {
     var prodname = document.getElementById("prodname").value.trim();
     var species = document.getElementById("species").value.trim();
     var style = document.getElementById("style").value.trim();
-    var initialPrice = document.getElementById("initial-price").value;
     var initialDescription = document.getElementById("initial-description").value.trim();
 
     if (id) {
@@ -43,7 +40,6 @@ function saveProduct() {
             json.products[i].prodname = prodname;
             json.products[i].species = species;
             json.products[i].style = style;
-            json.products[i].initialPrice = parseFloat(initialPrice);
             json.products[i].initialDescription = initialDescription;
         } else {
             alert("Too big product id.");
@@ -53,7 +49,6 @@ function saveProduct() {
             prodname: prodname,
             species: species,
             style: style,
-            initialPrice: initialPrice,
             initialDescription: initialDescription,
             entries: []
         };
@@ -67,7 +62,6 @@ function saveJSON() {
     try {
         let data = JSON.stringify(json);
         fs.writeFileSync('./files/database.json', data);
-        alert("Zapisano pomyślnie.");
     } catch (e) {
         alert("Wystąpił błąd przy zapisywaniu!");
     }

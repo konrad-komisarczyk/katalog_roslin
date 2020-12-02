@@ -17,11 +17,23 @@
         <label for="date">Data: </label>
         <input id="date" name="date" type="date" required>
         <br/><br/>
+        <label for="highlighted">Zaznacz, jeżeli to wyróżniony wpis początkowy: </label>
+        <input id="highlighted" name="highlighted" type="checkbox">
+        <br/><br/>
+        <label for="annual">Zaznacz, jeżeli to podsumowanie roczne: </label>
+        <input id="annual" name="annual" type="checkbox">
+        <br/><br/>
         <label for="price-increment">Wzrost kosztu: </label>
         <input id="price-increment" name="price-increment" type="number" placeholder="0" required> zł
         <br/><br/>
+        <label for="container">Nowy pojemnik (opcjonalne): </label>
+        <input id="container" name="container"> <small>(Trzeba wypełniać tylko, jeżeli przesadziłeś roślinę w tym wpisie)</small>
+        <br/><br/>
+        <label for="height">Aktualna wysokość (opcjonalne): </label>
+        <input id="height" name="height" type="number"> cm <small>(Wypełniać, jeżeli zmierzyłeś roslinę przed tym wpisem)</small>
+        <br/><br/>
         <label for="description">Opis: </label>
-        <textarea id="description" name="description" rows="10" cols="130"></textarea>
+        <textarea id="description" name="description" rows="10" cols="130" placeholder="Opisz wykonane prace, np. przycinanie..."></textarea>
         <br/><br/>
         <label for="images">Zdjęcia: </label>
         <input id="images" name="images[]" type="file" multiple>
@@ -31,5 +43,15 @@
     </form>
 </div>
 <script src="addEntry.js"></script>
+<script>
+    var annual = document.getElementById("annual");
+    var description = document.getElementById("description");
+    annual.addEventListener("change", function () {
+        if (annual.checked  && description.value === "") {
+            description.value = "Podlewanie, zraszanie, nawożenie, formowanie korygujące, " +
+                "zabezpieczanie na zimę, opryski owadobójcze i grzybobójcze, etc."
+        }
+    })
+</script>
 </body>
 </html>
